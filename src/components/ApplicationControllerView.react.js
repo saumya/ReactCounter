@@ -18,6 +18,12 @@ var ApplicationControllerView = React.createClass({
 			<div>
 				<header>{this.props.header} Total: {this.state.totalCount}</header>
 				<div>
+					<div>
+						{todayFormated}
+						<span>
+							<button>Count Today</button>
+						</span>
+					</div>
 					<ul>
 						<li>{todayFormated}</li>
 						<li>{todayFormated}</li>
