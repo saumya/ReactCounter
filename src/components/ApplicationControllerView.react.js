@@ -2,6 +2,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 //
+var UserInputView = require('./UserInputView.react'); 
+//
 // props : owned by parent component
 // state : owned by component itself and its private to the component itself
 //
@@ -18,12 +20,7 @@ var ApplicationControllerView = React.createClass({
 			<div>
 				<header>{this.props.header} Total: {this.state.totalCount}</header>
 				<div>
-					<div>
-						{todayFormated}
-						<span>
-							<button>Count Today</button>
-						</span>
-					</div>
+					<UserInputView today={todayFormated} />
 					<ul>
 						<li>{todayFormated}</li>
 						<li>{todayFormated}</li>
