@@ -12,9 +12,18 @@ var ApplicationControllerView = React.createClass({
 		});
 	},
 	render:function(){
+		var today = new Date();
+		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 		return (
 			<div>
 				<header>{this.props.header}</header>
+				<div>
+					<ul>
+						<li>{todayFormated}</li>
+						<li>{todayFormated}</li>
+						<li>{todayFormated}</li>
+					</ul>
+				</div>
 				<footer>{this.state.totalCount}</footer>
 			</div>
 		);
