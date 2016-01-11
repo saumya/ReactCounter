@@ -11,3 +11,4 @@ node_modules/*
 ### React and Babel Builds ###############
 #
 buildReact/*
+build/*
