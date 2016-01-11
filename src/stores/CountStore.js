@@ -7,8 +7,11 @@ var _ = require('underscore');
 var _counts = {}, _selected = {};
 //
 function loadCountData(data){
-	console.log('CountStore:loadCountData:',data);
+	console.log('CountStore : loadCountData : data:',data);
 	_counts = data[0];
+}
+function _addCount(newDay){
+	console.log('CountStore : _addCount : data:',newDay);
 }
 // CountStore
 var CountStore = _.extend({},EventEmitter.prototype,{
@@ -29,7 +32,7 @@ var CountStore = _.extend({},EventEmitter.prototype,{
 });
 // Register callback with AppDispatcher
 AppDispatcher.register(function(payload){
-	console.log('payload:',payload);
+	console.log('CountStore : AppDispatcher.register : payload:',payload);
 	var action = payload.action;
 	var text;
 	console.log('CountStore : AppDispatcher.register : actionType:'+action.actionType);
@@ -38,12 +41,17 @@ AppDispatcher.register(function(payload){
 			loadCountData(action.data);
 		break;
 		case FluxCountConstants.COUNTER_ADD:
+			console.group('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_ADD');
 			console.log('FluxCountConstants.COUNTER_ADD');
-			console.log('TODO: implement this case');
+			console.log('TODO : implement this case');
+			console.groupEnd();
+			//
+			_addCount(action.data);
 		break;
 		default:
 			return true;
 	}
+	console.log('CountStore : AppDispatcher.register : just before emitChange');
 	CountStore.emitChange();
 	return true;
 });
