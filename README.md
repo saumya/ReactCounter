@@ -10,6 +10,11 @@ To compile and pack the project, here are the commands
  - npm run 2js
  - npm run pack
 
+### keyMirror lib is not needed
+ - check the CountStore.js for the example         
+ 
+I have commented out the 'keyMirror', but the application still works fine
+
 
 
 
