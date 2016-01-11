@@ -7,14 +7,17 @@ var _ = require('underscore');
 var _counts = {}, _selected = {};
 //
 function loadCountData(data){
+	console.log('loadCountData');
 	_counts = data[0];
 }
 // CountStore
 var CountStore = _.extend({},EventEmitter.prototype,{
 	getCounts : function(){
+		console.log('CountStore:getCounts:');
 		return _counts;
 	},
 	emitChange: function(){
+		console.log('CountStore:emitChange:');
 		this.emit('change');
 	},
 	addChangeListener: function(callback){

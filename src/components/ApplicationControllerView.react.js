@@ -30,7 +30,10 @@ var ApplicationControllerView = React.createClass({
 		CountStore.removeChangeListener(this._onChange);
 	},
 	render:function(){
+		//debugger;
 		console.log('ApplicationControllerView : render :');
+		console.log('counts :',this.state.counts);
+		console.log('totalCount :',this.state.totalCount);
 		//
 		var today = new Date();
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();

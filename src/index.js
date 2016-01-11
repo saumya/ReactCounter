@@ -6,10 +6,14 @@
 	//
 	var React = require('react');
 	var ReactDOM = require('react-dom');
+	//
 	var ApplicationControllerView = require('./components/ApplicationControllerView.react');
-	// Load the dummy data
+	var CountsAPI = require('./utils/CountsAPI');
+	// Load the Mock data
 	var CountsData = require('./data/CountsData');
 	CountsData.init();
+	// Call Mock API
+	CountsAPI.getCountData();
 	// Render the application
 	ReactDOM.render(
 		<div>
