@@ -12,8 +12,12 @@ var FluxCountActions = {
 		});
 	},
 	addCount: function(data){
+		console.group('addCount');
+		console.log('FluxCountActions : FluxCountConstants :',FluxCountConstants);
+		console.log('FluxCountActions : addCount :',FluxCountConstants.COUNTER_ADD);
+		console.groupEnd();
 		AppDispatcher.handleAction({
-			actionType: FluxCountActions.COUNTER_ADD,
+			actionType: FluxCountConstants.COUNTER_ADD,
 			data:data
 		});
 	}

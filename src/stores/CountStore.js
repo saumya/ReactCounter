@@ -29,12 +29,17 @@ var CountStore = _.extend({},EventEmitter.prototype,{
 });
 // Register callback with AppDispatcher
 AppDispatcher.register(function(payload){
+	console.log('payload:',payload);
 	var action = payload.action;
 	var text;
 	console.log('CountStore : AppDispatcher.register : actionType:'+action.actionType);
 	switch(action.actionType){
 		case FluxCountConstants.RECEIVE_DATA:
 			loadCountData(action.data);
+		break;
+		case FluxCountConstants.COUNTER_ADD:
+			console.log('FluxCountConstants.COUNTER_ADD');
+			console.log('TODO: implement this case');
 		break;
 		default:
 			return true;
