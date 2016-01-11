@@ -1,9 +1,9 @@
 //
-var dataObj = {
+var CountsData = {
   // Load Mock Product Data Into localStorage
   init: function() {
     localStorage.clear();
-    localStorage.setItem('counts', JSON.stringify([
+    localStorage.setItem('countData', JSON.stringify([
       {
         id: '0011001',
         name: 'Counter',
@@ -25,5 +25,5 @@ var dataObj = {
   }
 
 };
-module.exports = dataObj;
+module.exports = CountsData;
 
