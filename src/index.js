@@ -11,7 +11,7 @@
 	ReactDOM.render(
 		<div>
 			<div>Ract</div>
-			<ApplicationControllerView></ApplicationControllerView>
+			<ApplicationControllerView header='Count'></ApplicationControllerView>
 		</div>
 		,document.getElementById('reactApp')
 	);	

@@ -5,7 +5,9 @@ var ReactDOM = require('react-dom');
 var ApplicationControllerView = React.createClass({
 	render:function(){
 		return (
-			<div>Reacting Application</div>
+			<div>
+				<header>{this.props.header}</header>
+			</div>
 		);
 	}
 });
