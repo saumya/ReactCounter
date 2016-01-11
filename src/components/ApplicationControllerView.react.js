@@ -18,6 +18,7 @@ function getCountState(){
 //
 var ApplicationControllerView = React.createClass({
 	getInitialState: function(){
+		console.log('ApplicationControllerView : getInitialState :');
 		var a = getCountState();
 		return ({
 			totalCount:0,
@@ -57,6 +58,7 @@ var ApplicationControllerView = React.createClass({
 	},
 	//
 	_onChange: function(){
+		console.log('ApplicationControllerView : _onChange :');
 		this.setState(getCountState());
 	}
 });
