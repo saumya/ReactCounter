@@ -16,7 +16,7 @@ var ApplicationControllerView = React.createClass({
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 		return (
 			<div>
-				<header>{this.props.header}</header>
+				<header>{this.props.header} Total: {this.state.totalCount}</header>
 				<div>
 					<ul>
 						<li>{todayFormated}</li>
@@ -24,7 +24,7 @@ var ApplicationControllerView = React.createClass({
 						<li>{todayFormated}</li>
 					</ul>
 				</div>
-				<footer>{this.state.totalCount}</footer>
+				<footer>The counter has reached End.</footer>
 			</div>
 		);
 	}
