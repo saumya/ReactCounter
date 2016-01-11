@@ -12,7 +12,7 @@ var FluxCountActions = {
 		});
 	},
 	addCount: function(data){
-		console.group('addCount');
+		console.group('FluxCountActions : addCount');
 		console.log('FluxCountActions : FluxCountConstants :',FluxCountConstants);
 		console.log('FluxCountActions : addCount :',FluxCountConstants.COUNTER_ADD);
 		console.groupEnd();

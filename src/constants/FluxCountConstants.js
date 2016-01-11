@@ -1,5 +1,5 @@
 //var keyMirror = require('react/lib/keyMirror'); // old, deprecated
-/*
+
 var keyMirror = require('fbjs/lib/keyMirror');
 var FluxCountConstants = keyMirror({
 	COUNTER_ADD: null,
@@ -9,9 +9,10 @@ var FluxCountConstants = keyMirror({
 	SET_SELECTED: null,   // Selects a product option
 	RECEIVE_DATA: null    // Loads our mock data
 });
-*/
 
-// Seems, we do not need 'keyMirror' library
+/*
+// Not working this way, 
+// thought, we do not need 'keyMirror' library
 var FluxCountConstants = {
 	COUNTER_ADD: null,
 	CART_ADD: null,       // Adds item to cart
@@ -20,4 +21,6 @@ var FluxCountConstants = {
 	SET_SELECTED: null,   // Selects a product option
 	RECEIVE_DATA: null    // Loads our mock data
 };
+*/
+
 module.exports = FluxCountConstants;
