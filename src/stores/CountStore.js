@@ -11,7 +11,16 @@ function loadCountData(data){
 	_counts = data[0];
 }
 function _addCount(newDay){
+	debugger;
+
 	console.log('CountStore : _addCount : data:',newDay);
+	console.log('CountStore : _addCount :',_counts['days']);
+	
+	var newData = {cDate: newDay};
+	//_counts['days'] = _.extend({},_counts['days'],newData);
+	_counts.days.push(newData);
+	console.log('CountStore : _addCount :',_counts['days']);
+	console.log('==========================================');
 }
 // CountStore
 var CountStore = _.extend({},EventEmitter.prototype,{
