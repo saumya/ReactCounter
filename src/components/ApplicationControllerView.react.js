@@ -38,18 +38,27 @@ var ApplicationControllerView = React.createClass({
 		console.log('ApplicationControllerView : render :');
 		console.log('ApplicationControllerView : render : counts :',this.state.counts);
 		console.log('ApplicationControllerView : render : totalCount :',this.state.totalCount);
+		console.log('ApplicationControllerView : render : days :',this.state.counts.count.days);
 		//
 		var today = new Date();
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+		//
+		var countedDays = this.state.counts.count.days;
+		//
 		return (
 			<div>
 				<header>{this.props.header} Total: {this.state.totalCount}</header>
 				<div>
 					<UserInputView today={todayFormated} />
 					<ul>
-						<li>{todayFormated}</li>
-						<li>{todayFormated}</li>
-						<li>{todayFormated}</li>
+						{Object.keys(countedDays).map(function(dayIndex){
+							//console.log('dayIndex',dayIndex);
+							return(
+								<li key={dayIndex}>
+									<h3 className="cName">{countedDays[dayIndex].cDate}</h3>
+								</li>
+							)
+						})}
 					</ul>
 				</div>
 				<footer>The counter has reached End.</footer>
