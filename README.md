@@ -6,6 +6,10 @@ Technologies used
  - [Flux][2]
  - [Babel][3]
 
+To compile and pack the project, here are the commands
+ - npm run 2js
+ - npm run pack
+
 
 
 
