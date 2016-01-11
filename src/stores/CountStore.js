@@ -7,7 +7,7 @@ var _ = require('underscore');
 var _counts = {}, _selected = {};
 //
 function loadCountData(data){
-	console.log('loadCountData');
+	console.log('CountStore:loadCountData:',data);
 	_counts = data[0];
 }
 // CountStore
@@ -31,6 +31,7 @@ var CountStore = _.extend({},EventEmitter.prototype,{
 AppDispatcher.register(function(payload){
 	var action = payload.action;
 	var text;
+	console.log('CountStore : AppDispatcher.register : actionType:'+action.actionType);
 	switch(action.actionType){
 		case FluxCountConstants.RECEIVE_DATA:
 			loadCountData(action.data);

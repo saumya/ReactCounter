@@ -6,6 +6,7 @@ var UserInputView = require('./UserInputView.react');
 var CountStore = require('../stores/CountStore');
 //
 function getCountState(){
+	console.log('ApplicationControllerView : getCountState :');
 	return ({
 		count : CountStore.getCounts()
 	});
@@ -24,16 +25,18 @@ var ApplicationControllerView = React.createClass({
 		});
 	},
 	componentDidMount: function(){
+		console.log('ApplicationControllerView : componentDidMount :');
 		CountStore.addChangeListener(this._onChange);
 	},
 	componentWillUnmount: function(){
+		console.log('ApplicationControllerView : componentWillUnmount :');
 		CountStore.removeChangeListener(this._onChange);
 	},
 	render:function(){
-		//debugger;
+		//
 		console.log('ApplicationControllerView : render :');
-		console.log('counts :',this.state.counts);
-		console.log('totalCount :',this.state.totalCount);
+		console.log('ApplicationControllerView : render : counts :',this.state.counts);
+		console.log('ApplicationControllerView : render : totalCount :',this.state.totalCount);
 		//
 		var today = new Date();
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
