@@ -8,8 +8,6 @@ var CountStore = require('../stores/CountStore');
 function getCountState(){
 	console.log('ApplicationControllerView : getCountState :');
 	var dataObj = CountStore.getCounts();
-	//var b = a.counts.count.days.length;
-	
 	var b = dataObj.days.length;
 	return ({
 		totalCount : b,
@@ -26,11 +24,6 @@ var ApplicationControllerView = React.createClass({
 		console.log('ApplicationControllerView : getInitialState :');
 		var a = getCountState();
 		return a;
-		/*
-		return ({
-			totalCount:0,
-			counts:a
-		});*/
 	},
 	componentDidMount: function(){
 		console.log('ApplicationControllerView : componentDidMount :');
