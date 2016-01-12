@@ -34,11 +34,10 @@ var ApplicationControllerView = React.createClass({
 		CountStore.removeChangeListener(this._onChange);
 	},
 	render:function(){
-		//
-		console.log('ApplicationControllerView : render :');
+		//console.log('ApplicationControllerView : render :');
 		console.log('ApplicationControllerView : render : counts :',this.state.counts);
-		console.log('ApplicationControllerView : render : totalCount :',this.state.totalCount);
-		console.log('ApplicationControllerView : render : days :',this.state.counts.days);
+		//console.log('ApplicationControllerView : render : totalCount :',this.state.totalCount);
+		//console.log('ApplicationControllerView : render : days :',this.state.counts.days);
 		//
 		var today = new Date();
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
@@ -47,7 +46,7 @@ var ApplicationControllerView = React.createClass({
 		//
 		return (
 			<div>
-				<header>{this.props.header} Total: {this.state.totalCount}</header>
+				<header>{this.props.header} {this.state.totalCount}</header>
 				<div>
 					<UserInputView today={todayFormated} />
 					<ul>
@@ -61,7 +60,7 @@ var ApplicationControllerView = React.createClass({
 						})}
 					</ul>
 				</div>
-				<footer>The counter has reached End.</footer>
+				<footer> <h3>Total : {this.state.totalCount}</h3> </footer>
 			</div>
 		);
 	},

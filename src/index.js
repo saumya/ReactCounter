@@ -17,8 +17,7 @@
 	// Render the application
 	ReactDOM.render(
 		<div>
-			<div>Ract</div>
-			<ApplicationControllerView header='Count'></ApplicationControllerView>
+			<ApplicationControllerView header='Day Count'></ApplicationControllerView>
 		</div>
 		,document.getElementById('reactApp')
 	);	
