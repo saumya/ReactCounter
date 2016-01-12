@@ -7,8 +7,13 @@ var CountStore = require('../stores/CountStore');
 //
 function getCountState(){
 	console.log('ApplicationControllerView : getCountState :');
+	var dataObj = CountStore.getCounts();
+	//var b = a.counts.count.days.length;
+	
+	var b = dataObj.days.length;
 	return ({
-		count : CountStore.getCounts()
+		totalCount : b,
+		counts : dataObj
 	});
 }
 
@@ -20,10 +25,12 @@ var ApplicationControllerView = React.createClass({
 	getInitialState: function(){
 		console.log('ApplicationControllerView : getInitialState :');
 		var a = getCountState();
+		return a;
+		/*
 		return ({
 			totalCount:0,
 			counts:a
-		});
+		});*/
 	},
 	componentDidMount: function(){
 		console.log('ApplicationControllerView : componentDidMount :');
@@ -38,12 +45,12 @@ var ApplicationControllerView = React.createClass({
 		console.log('ApplicationControllerView : render :');
 		console.log('ApplicationControllerView : render : counts :',this.state.counts);
 		console.log('ApplicationControllerView : render : totalCount :',this.state.totalCount);
-		console.log('ApplicationControllerView : render : days :',this.state.counts.count.days);
+		console.log('ApplicationControllerView : render : days :',this.state.counts.days);
 		//
 		var today = new Date();
 		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 		//
-		var countedDays = this.state.counts.count.days;
+		var countedDays = this.state.counts.days;
 		//
 		return (
 			<div>
