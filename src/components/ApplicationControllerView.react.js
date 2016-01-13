@@ -40,7 +40,8 @@ var ApplicationControllerView = React.createClass({
 		//console.log('ApplicationControllerView : render : days :',this.state.counts.days);
 		//
 		var today = new Date();
-		var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+		//var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+		var todayFormated = today.toDateString();
 		//
 		var countedDays = this.state.counts.days;
 		//
