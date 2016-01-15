@@ -1,3 +1,8 @@
 body {
 	background: #CCCCCC;
 }
+ul {
+ list-style-type: none;
+ list-style-position: none;
+ list-style-image: none;
+}
