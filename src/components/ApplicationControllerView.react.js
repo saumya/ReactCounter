@@ -40,8 +40,8 @@ var ApplicationControllerView = React.createClass({
 		//console.log('ApplicationControllerView : render : days :',this.state.counts.days);
 		//
 		var today = new Date();
-		//var todayFormated = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-		var todayFormated = today.toDateString();
+		var todayFormatedToSave = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+		var todayFormatedToShow = today.toDateString();
 		//
 		var countedDays = this.state.counts.days;
 		//
@@ -49,7 +49,7 @@ var ApplicationControllerView = React.createClass({
 			<div>
 				<header> {this.props.header} {this.state.totalCount} </header>
 				<div>
-					<UserInputView today={todayFormated} />
+					<UserInputView todayToShow={todayFormatedToShow} todayToSave={todayFormatedToSave} />
 					<ul>
 						{Object.keys(countedDays).map(function(dayIndex){
 							//console.log('dayIndex',dayIndex);
