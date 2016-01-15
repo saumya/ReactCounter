@@ -6,3 +6,9 @@ ul {
  list-style-position: none;
  list-style-image: none;
 }
+
+.today{
+	display: inline-block;
+	font-size: 1.2em;
+	width: 9em;
+}

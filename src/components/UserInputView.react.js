@@ -15,8 +15,10 @@ var UserInputView = React.createClass({
 		var self = this;
 		return (
 			<div>
-				{this.props.todayToShow}
-				<button type="button" className="addCount" onClick={self.incrementCount.bind(self, this.props.todayToSave)}> Add </button>
+				<p>
+					Today : <span className="today">{this.props.todayToShow}</span>
+					<button type="button" className="addCount" onClick={self.incrementCount.bind(self, this.props.todayToSave)}> Add </button>
+				</p>
 			</div>
 		);
 	}
