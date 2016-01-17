@@ -12,3 +12,13 @@ ul {
 	font-size: 1.2em;
 	width: 8em;
 }
+
+/* Pure CSS customisation */
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+		color: #FFDDDD;
+}
+
+.button-xsmall {
+    font-size: 70%;
+}

@@ -18,7 +18,7 @@ var ClearAll = React.createClass({
 		return (
 			<div>
 				{this.props.header} <span> {this.props.totalCount} </span>
-				<button type="button" className="clearCount" onClick={self.clearCount.bind(self,null)}> Clear All </button>
+				<button type="button" className="button-xsmall button-error pure-button" onClick={self.clearCount.bind(self,null)}> Clear </button>
 			</div>
 		);
 	}
