@@ -22,7 +22,7 @@ var FluxCountActions = {
 		});
 	},
 	clearCounts: function(){
-		console.group('FluxCountActions : clearCounts');
+		console.log('FluxCountActions : clearCounts');
 		AppDispatcher.handleAction({
 			actionType: FluxCountConstants.COUNTER_CLEAR
 		});

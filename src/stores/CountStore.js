@@ -60,6 +60,7 @@ AppDispatcher.register(function(payload){
 			_addCount(action.data);
 		break;
 		case FluxCountConstants.COUNTER_CLEAR:
+			console.log('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_CLEAR');
 			CountsAPI.clearData();
 		break;
 		default:
