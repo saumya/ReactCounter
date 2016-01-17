@@ -24,6 +24,10 @@ function _addCount(newDay){
 	console.log('CountStore : _addCount :',_counts['days']);
 	console.log('==========================================');
 }
+function _clearData(){
+	console.log('CountStore : _clearData :');
+	//CountsAPI.clearData();
+}
 // CountStore
 var CountStore = _.extend({},EventEmitter.prototype,{
 	getCounts : function(){
@@ -62,7 +66,6 @@ AppDispatcher.register(function(payload){
 		case FluxCountConstants.COUNTER_CLEAR:
 			console.log('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_CLEAR');
 			_counts.days = [];
-			//CountsAPI.clearData();
 		break;
 		default:
 			return true;
