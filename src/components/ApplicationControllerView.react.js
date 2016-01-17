@@ -48,7 +48,7 @@ var ApplicationControllerView = React.createClass({
 		//
 		return (
 			<div>
-				<ClearAllView header="Total count" toalCount={this.state.totalCount} />
+				<ClearAllView header="Total count" totalCount={this.state.totalCount} />
 				<div>
 					<UserInputView todayToShow={todayFormatedToShow} todayToSave={todayFormatedToSave} />
 					<ul>
