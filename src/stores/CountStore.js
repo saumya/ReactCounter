@@ -61,7 +61,8 @@ AppDispatcher.register(function(payload){
 		break;
 		case FluxCountConstants.COUNTER_CLEAR:
 			console.log('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_CLEAR');
-			CountsAPI.clearData();
+			_counts.days = [];
+			//CountsAPI.clearData();
 		break;
 		default:
 			return true;
