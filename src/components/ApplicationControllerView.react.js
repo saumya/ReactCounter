@@ -47,7 +47,10 @@ var ApplicationControllerView = React.createClass({
 		//
 		return (
 			<div>
-				<header> {this.props.header} {this.state.totalCount} </header>
+				<header> 
+					{this.props.header} {this.state.totalCount} 
+					<button type="button" className="clearCount"> Clear All </button>
+				</header>
 				<div>
 					<UserInputView todayToShow={todayFormatedToShow} todayToSave={todayFormatedToSave} />
 					<ul>
@@ -55,7 +58,8 @@ var ApplicationControllerView = React.createClass({
 							//console.log('dayIndex',dayIndex);
 							return(
 								<li key={dayIndex}>
-									<h3 className="cName">{countedDays[dayIndex].cDate}</h3>
+									{countedDays[dayIndex].cDate}
+									<button>Remove</button>
 								</li>
 							)
 						})}
