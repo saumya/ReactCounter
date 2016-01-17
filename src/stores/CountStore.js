@@ -4,6 +4,8 @@ var EventEmitter = require('events').EventEmitter;
 var FluxCountConstants = require('../constants/FluxCountConstants');
 var _ = require('underscore');
 //
+var CountsAPI = require('../utils/CountsAPI');
+//
 var _counts = {}, _selected = {};
 //
 function loadCountData(data){
@@ -56,6 +58,9 @@ AppDispatcher.register(function(payload){
 			console.groupEnd();
 			//
 			_addCount(action.data);
+		break;
+		case FluxCountConstants.COUNTER_CLEAR:
+			CountsAPI.clearData();
 		break;
 		default:
 			return true;

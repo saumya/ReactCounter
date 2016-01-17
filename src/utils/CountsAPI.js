@@ -6,6 +6,9 @@ var CountsAPI = {
   	console.log('CountsAPI : getCountData :');
     var data = JSON.parse(localStorage.getItem('countData'));
     FluxCountActions.recieveCounts(data);
+  },
+  clearData: function(){
+  	localStorage.clear();
   }
 };
 module.exports = CountsAPI;

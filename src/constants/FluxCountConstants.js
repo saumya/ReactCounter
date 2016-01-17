@@ -15,6 +15,7 @@ var FluxCountConstants = keyMirror({
 //
 var FluxCountConstants = {
 	COUNTER_ADD: 'COUNTER_ADD',
+	COUNTER_CLEAR: 'COUNTER_CLEAR',
 	CART_ADD: 'CART_ADD',       
 	CART_REMOVE: 'CART_REMOVE',    
 	CART_VISIBLE: 'CART_VISIBLE',   

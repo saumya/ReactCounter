@@ -20,6 +20,12 @@ var FluxCountActions = {
 			actionType: FluxCountConstants.COUNTER_ADD,
 			data:data
 		});
+	},
+	clearCounts: function(){
+		console.group('FluxCountActions : clearCounts');
+		AppDispatcher.handleAction({
+			actionType: FluxCountConstants.COUNTER_CLEAR
+		});
 	}
 };
 //

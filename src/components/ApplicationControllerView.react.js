@@ -2,6 +2,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var UserInputView = require('./UserInputView.react'); 
+var ClearAllView = require('./ClearAll.react'); 
 
 var CountStore = require('../stores/CountStore');
 //
@@ -47,10 +48,7 @@ var ApplicationControllerView = React.createClass({
 		//
 		return (
 			<div>
-				<header> 
-					{this.props.header} {this.state.totalCount} 
-					<button type="button" className="clearCount"> Clear All </button>
-				</header>
+				<ClearAllView header="Total count" toalCount={this.state.totalCount} />
 				<div>
 					<UserInputView todayToShow={todayFormatedToShow} todayToSave={todayFormatedToSave} />
 					<ul>
