@@ -7,9 +7,10 @@ var CountsData = {
       {
         id: '0011001',
         name: 'Counter',
-        image: 'scotch-beer.png',
+        image: 'logo.png',
         description: 'The number of days, when thing is delivered.',
         days: [
+          /*
           {
             cDate : '7-1-2016'
           },
@@ -18,7 +19,7 @@ var CountsData = {
           },
           {
             cDate : '11-1-2016'
-          }
+          }*/
         ]
       }
     ]));
@@ -26,4 +27,3 @@ var CountsData = {
 
 };
 module.exports = CountsData;
-
