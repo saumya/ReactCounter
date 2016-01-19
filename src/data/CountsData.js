@@ -2,7 +2,7 @@
 var CountsData = {
   // Load Mock Product Data Into localStorage
   init: function() {
-    localStorage.clear();
+    //localStorage.clear();
     localStorage.setItem('countData', JSON.stringify([
       {
         id: '0011001',

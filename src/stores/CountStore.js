@@ -16,17 +16,20 @@ function _addCount(newDay){
 	//debugger;
 	console.log('CountStore : _addCount : data:',newDay);
 	console.log('CountStore : _addCount :',_counts['days']);
-	
-	var newData = {cDate: newDay};
+
+	var newData = {'cDate': newDay};
 	//_counts['days'] = _.extend({},_counts['days'],newData);
 	_counts.days.push(newData);
 
 	console.log('CountStore : _addCount :',_counts['days']);
 	console.log('==========================================');
+
+	CountsAPI.setCountData(_counts.days);
 }
 function _clearData(){
 	console.log('CountStore : _clearData :');
-	//CountsAPI.clearData();
+	CountsAPI.clearData();
+	//_counts.days = [];
 }
 // CountStore
 var CountStore = _.extend({},EventEmitter.prototype,{
@@ -65,7 +68,8 @@ AppDispatcher.register(function(payload){
 		break;
 		case FluxCountConstants.COUNTER_CLEAR:
 			console.log('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_CLEAR');
-			_counts.days = [];
+			//_counts.days = [];
+			_clearData();
 		break;
 		default:
 			return true;
