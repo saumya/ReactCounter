@@ -20,6 +20,5 @@
 			<ApplicationControllerView header='Day Count'></ApplicationControllerView>
 		</div>
 		,document.getElementById('reactApp')
-	);	
+	);
 })();
-
