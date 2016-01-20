@@ -9,7 +9,11 @@ var CountsAPI = {
   },
   clearData: function(){
     console.log('CountsAPI : clearData : ');
-    localStorage.clear();
+    //localStorage.clear();
+    var data = JSON.parse(localStorage.getItem('countData'));
+    var _counts = data[0];
+    _counts.days = []; // initialise the Array again
+    localStorage.setItem('countData',JSON.stringify(data));
   },
   setCountData: function(newData){
     var data = JSON.parse(localStorage.getItem('countData'));
