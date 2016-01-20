@@ -8,12 +8,15 @@ var CountsAPI = {
     FluxCountActions.recieveCounts(data);
   },
   clearData: function(){
+    //debugger;
     console.log('CountsAPI : clearData : ');
     //localStorage.clear();
     var data = JSON.parse(localStorage.getItem('countData'));
     var _counts = data[0];
     _counts.days = []; // initialise the Array again
     localStorage.setItem('countData',JSON.stringify(data));
+    // Get the data again. This is a Fake API, so Fake Everything.
+    //this.getCountData();
   },
   setCountData: function(newData){
     var data = JSON.parse(localStorage.getItem('countData'));

@@ -35,6 +35,9 @@ function _clearData(){
 var CountStore = _.extend({},EventEmitter.prototype,{
 	getCounts : function(){
 		console.log('CountStore:getCounts:');
+		//CountsAPI.getCountData();
+
+		//
 		return _counts;
 	},
 	emitChange: function(){
