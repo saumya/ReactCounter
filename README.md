@@ -6,6 +6,10 @@ Technologies used
  - [Flux][2]
  - [Babel][3]
 
+CSS library
+	- [Skeleton][4]
+	- [Pure][5]
+
 To compile and pack the project, here are the commands
  - npm run 2js
  - npm run pack
@@ -25,3 +29,5 @@ I have commented out the 'keyMirror', but the application still works fine
 [1]: http://facebook.github.io/react/
 [2]: http://facebook.github.io/flux/
 [3]: https://babeljs.io
+[4]: https://github.com/dhg/Skeleton
+[5]: https://github.com/yahoo/pure/
