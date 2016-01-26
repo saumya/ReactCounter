@@ -52,7 +52,8 @@ var CountStore = _.extend({},EventEmitter.prototype,{
 	}
 });
 // Register callback with AppDispatcher
-AppDispatcher.register(function(payload){
+//AppDispatcher.register(function(payload){
+CountStore.dispatchToken = AppDispatcher.register(function(payload){
 	console.log('CountStore : AppDispatcher.register : payload:',payload);
 	var action = payload.action;
 	var text;
@@ -60,6 +61,7 @@ AppDispatcher.register(function(payload){
 	switch(action.actionType){
 		case FluxCountConstants.RECEIVE_DATA:
 			loadCountData(action.data);
+			CountStore.emitChange();
 		break;
 		case FluxCountConstants.COUNTER_ADD:
 			console.group('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_ADD');
@@ -68,6 +70,7 @@ AppDispatcher.register(function(payload){
 			console.groupEnd();
 			//
 			_addCount(action.data);
+			CountStore.emitChange();
 		break;
 		case FluxCountConstants.COUNTER_CLEAR:
 			console.log('CountStore : AppDispatcher.register : FluxCountConstants.COUNTER_CLEAR');
@@ -76,13 +79,16 @@ AppDispatcher.register(function(payload){
 		break;
 		case FluxCountConstants.ON_COUNTER_CLEAR:
 			console.log('CountStore : AppDispatcher.register : FluxCountConstants.ON_COUNTER_CLEAR');
-			CountsAPI.getCountData();
+
+			//CountsAPI.getCountData();
+			//AppDispatcher.waitFor([CountStore.dispatchToken]);
+
 		break;
 		default:
 			return true;
 	}
 	console.log('CountStore : AppDispatcher.register : just before emitChange');
-	CountStore.emitChange();
+	//CountStore.emitChange();
 	return true;
 });
 //

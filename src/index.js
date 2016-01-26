@@ -11,7 +11,7 @@
 	var CountsAPI = require('./utils/CountsAPI');
 	// Load the Mock data
 	var CountsData = require('./data/CountsData');
-	CountsData.init();
+	//CountsData.init();
 	// Call Mock API
 	CountsAPI.getCountData();
 	// Render the application

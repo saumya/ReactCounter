@@ -17,7 +17,7 @@ var CountsAPI = {
     localStorage.setItem('countData',JSON.stringify(data));
     // Get the data again. This is a Fake API, so Fake Everything.
     //this.getCountData();
-    //FluxCountActions.onClearCounts();
+    FluxCountActions.onClearCounts();
   },
   setCountData: function(newData){
     var data = JSON.parse(localStorage.getItem('countData'));
