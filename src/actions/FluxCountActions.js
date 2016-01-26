@@ -1,4 +1,4 @@
-// 
+//
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var FluxCountConstants = require('../constants/FluxCountConstants');
 //
@@ -26,7 +26,13 @@ var FluxCountActions = {
 		AppDispatcher.handleAction({
 			actionType: FluxCountConstants.COUNTER_CLEAR
 		});
-	}
+	},
+	onClearCounts: function(){
+		console.log('FluxCountActions : onClearCounts');
+		AppDispatcher.handleAction({
+			actionType: FluxCountConstants.ON_COUNTER_CLEAR
+		});
+	},
 };
 //
 module.exports = FluxCountActions;
