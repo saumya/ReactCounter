@@ -7,8 +7,8 @@ Technologies used
  - [Babel][3]
 
 CSS library
-	- [Skeleton][4]
-	- [Pure][5]
+ - [Skeleton][4]
+ - [Pure][5]
 
 To compile and pack the project, here are the commands
  - npm run 2js
