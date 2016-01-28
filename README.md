@@ -22,7 +22,11 @@ I have commented out the 'keyMirror', but the application still works fine
 
 
 
+TODO: Fix this bug !
 
+```
+Uncaught Error: Invariant Violation: Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.
+```
 
 
 
